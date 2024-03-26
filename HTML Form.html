@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>HTML Form</title>
+  <style>
+    body{
+      display:flex;
+      justify-cintent:center;
+      height:100vh;
+      margin:0;
+      background-color: red;
+    }
+    form{
+      width:400px;
+      background-color: blue
+      Padding:20 px;
+      border-radius:8 px;
+      box-shadow: 0 0 10 px;
+            rgba(0,0,0,0.1)
+    }
+    fieldset{
+      border:1 px solid red;
+      paddding:10 px;
+      margin:0;
+    }
+    legend{
+      font-weight:bold;
+      margin-bottom:10 px;
+    }
+    label{
+      display:black;
+      margin-bottom:5 px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    input[type="date"]
+    {
+      width:calc(100%-20 px);
+      padding:8 px;
+      margin-bottom:10 px;
+      box-sizing:border-box;
+      border:1 px solid black;
+      border-radius:4 px;
+    }
+    input[type="radius"]
+    {
+      margin-left:20 px;
+    }
+    input[type="submit"]
+    {
+    padding:10 px, 20 px;
+    border-radius:5 px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+        <form>
+          <fieldset>
+            <legend>
+              user personal information 
+            </legend>
+            <br>
+            <label> Enter your Full name</label>
+            <input type="text" name="name">
+          <br>
+          <br>
+            <label> Enter your Email</label>
+            <input type="email" name="email">
+        <br>
+        <br>
+                 <label> Enter your Password</label>
+                 <input type="Password" name="Pass">
+      <br>
+      <br>
+                 <label> Confirm your Password</label>
+                 <input type="Password" name="Confirm pass">
+    <br>
+    <br>
+                 <label> Enter your gender</label>
+                 <input type="radio" name="gender" value="male">male
+                 <input type="radio" name="gender" value="female">female
+  <br>
+  <br>
+                 <label>Enter Your Date of Birth</label>
+                 <input type="date" name="dob">
+<br>
+<br>
+                 <label> Enter your Address :</label>
+                 <textarea name="" address=""></textarea>
+<br>
+                 <input type="submit" value="submit">
+                          </fieldset>
+        </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
